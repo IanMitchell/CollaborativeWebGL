@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  header(id="title")
+    h1= title
+  aside(id="panel")
+    h2 Edit Scene
+
+
+    label Add Shape:
+    form(id="add_shape")
+      input(type="submit", value="Cube", id="add_cube")
+      input(type="submit", value="Pyramid", id="add_pyramid")
+      //input(type="submit", value="Sphere", id="add_sphere")
+      //input(type="submit", value="Cylinder")
+
+    select(id="shape_id")
+
+    form(id="edit_shape")
+      label(for="color") Set Color:
+      input(type="color", id="color")
+
+      label Translate:
+      div.group
+        input(type="text", value="0.0", id="translate_x")
+        input(type="text", value="0.0", id="translate_y")
+        input(type="text", value="0.0", id="translate_z")
+
+      label Scale:
+      div.group
+        input(type="text", value="1.0", id="scale_x")
+        input(type="text", value="1.0", id="scale_y")
+        input(type="text", value="1.0", id="scale_z")
+
+      label Rotation Axis:
+      div.group
+        input(type="text", value="0.0", id="rotation_x")
+        input(type="text", value="0.0", id="rotation_y")
+        input(type="text", value="1.0", id="rotation_z")
+
+      label Rotation Degrees:
+      div.group
+        input(type="text", value="0.0", id="rotation_deg")
+
+      br
+      br
+      label Toggle Visibility
+      input(type="button", value="Toggle Visibility", id="remove_shape", style="margin-left: 30px; border-radius: 5px")
+
+      p(id="copyright") CSC 471 Ian Mitchell
+
+  canvas(id="canvas", width="500", height="500")

@@ -1,0 +1,21 @@
+{
+  "name": "WebGL_471",
+  "version": "0.0.1-20",
+  "author": "Ian Mitchell <ian.mitchel1@live.com>",
+  "description": "WebGL + NodeJS",
+  "main": "./server.js",
+  "dependencies": {
+    "jade": "*",
+    "express": "~3.1.0",
+    "socket.io": "*"
+  },
+  "noAnalyze": true,
+  "license": "Apache",
+  "engines": {
+    "node": ">=0.6.14"
+  },
+  "subdomain": "webgl471",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
